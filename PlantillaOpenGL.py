@@ -78,7 +78,7 @@ def dibujarNube():
 
     glEnd()
 
-def dibujarNube1():
+def dibujarNube2():
     glColor3f(1,1,1)
     glBegin(GL_POLYGON)
 
@@ -87,6 +87,17 @@ def dibujarNube1():
         glVertex3f(cos(angulo) * 0.30 + 0.2,sin(angulo) * 0.1 + 0.7 ,0.0)
 
     glEnd()
+
+def dibujarNube3():
+    glColor3f(1,1,1)
+    glBegin(GL_POLYGON)
+
+    for x in range(360):
+        angulo = x * 3.1416 / 180.0
+        glVertex3f(cos(angulo) * 0.35 + 0.5,sin(angulo) * 0.1 + 0.85 ,0.0)
+
+    glEnd()
+
 
 def dibujarTecho():
 
@@ -204,7 +215,8 @@ def dibujar():
     dibujarPasto()
     dibujarCielo()
     dibujarNube()
-    dibujarNube1()
+    dibujarNube2()
+    dibujarNube3()
     dibujarRayo()
     dibujarRayo2()
     dibujarSol()
